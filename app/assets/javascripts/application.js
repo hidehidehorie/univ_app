@@ -10,7 +10,13 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
 //= require jquery_ujs
+//= require jquery
+//= require materialize
 //= require turbolinks
 //= require_tree .
+
+$( document ).on('turbolinks:load' , function(){
+  $(".dropdown-trigger").dropdown();
+  $('.sidenav').sidenav();
+})
